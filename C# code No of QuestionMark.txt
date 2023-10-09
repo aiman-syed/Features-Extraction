@@ -1,0 +1,51 @@
+using System;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Linq;
+namespace Capitals
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int countch = 0, i;
+            int count = 0;
+            var C1 = '?';
+
+            string text = File.ReadAllText("C:\\Users\\aiman\\Desktop\\AP\\Training\\author_id_350.txt");
+
+
+
+
+
+            char[] charArr = text.ToCharArray();
+
+
+
+
+
+
+
+            for (i = 0; i < charArr.Length; i++)
+
+            {
+                if (Char.IsUpper(charArr[i])) { 
+                    countch++;}
+
+
+               /* if ((charArr[i])== C1)
+                {
+                    count++;
+                }*/
+                
+
+            }
+            Console.WriteLine("Number of Capitals:{0}", countch);
+
+            //Console.WriteLine("Number of Question:{0}", count);
+            Console.ReadLine();
+
+
+        }
+    }
+}

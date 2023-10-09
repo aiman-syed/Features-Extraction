@@ -1,0 +1,17 @@
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import RegexpTokenizer
+import re
+count=0
+
+document_text = open('C:\\Users\\aiman\Desktop\\Training\\author_id_001.txt', 'r')
+
+text_string = document_text.read().lower()
+match_pattern = re.findall(r'\b[a-z]{1,1}\b', text_string)
+
+print(match_pattern)
+
+for word in match_pattern:
+    if (len(word) ==1):
+        count+=1
+print (count)

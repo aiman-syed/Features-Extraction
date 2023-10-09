@@ -1,0 +1,27 @@
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import RegexpTokenizer
+import re
+count1=0
+
+
+
+document_text = open('C:\\Users\\aiman\Desktop\\Training\\author_id_200.txt', 'r')
+
+text_string = document_text.read().lower()
+match_pattern = re.findall(r'\b[a-z]{6,100}\b', text_string)
+
+print(match_pattern)
+
+for word in match_pattern:
+    if len(word) >= 6:
+        count1+=1
+print (count1)
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+using System;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Linq;
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args) 
+        {
+            int countch = 0, i;
+            
+            string text = File.ReadAllText("C:\\Users\\aiman\\Desktop\\author_id_202.txt");
+            
+
+
+
+
+            char[] charArr = text.ToCharArray();
+
+
+
+           
+            
+
+             
+                for (i = 0; i < charArr.Length; i++)
+
+                {
+                    if (Char.IsDigit(charArr[i]))
+                        countch++;
+
+
+                }
+            Console.WriteLine("Number of digits:{0}", countch);
+            Console.ReadLine();
+
+
+        
+            
+            
+        }
+    }
+    
+}

@@ -1,0 +1,41 @@
+
+sentences = nltk.sent_tokenize(text)
+no_of_sen = len(sentences)
+print (sentences)
+print (no_of_sen)
+
+no_of_chars=0
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import RegexpTokenizer
+import re
+import statistics
+count=0
+
+document_text = open('C:\\Users\\aiman\Desktop\\Training\\author_id_001.txt', 'r')
+
+text_string = document_text.read().lower()
+for word in sentences:
+    no_of_chars+=len(word)
+print (no_of_chars)
+
+
+
+
+tokenizer = RegexpTokenizer(r'\w+')
+words = tokenizer.tokenize(text)
+no_of_words = len(words)
+#print (words)
+#print (no_of_words)
+
+
+
+#caluculating no of chars
+no_of_chars=0
+for word in words:
+    no_of_chars+=len(word)
+#print (no_of_chars)
+   
+
+
+ 

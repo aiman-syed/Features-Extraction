@@ -1,0 +1,11 @@
+import emoji
+import regex
+text="hi im here ;),good :)"
+def split_count(text):
+    emoji_list=[':)']
+    data=regex.findall(r'\X,text')
+    for word in data:
+        if any(char in emoji.UNICODE_EMOJI for char in word):
+            emoji_list.append(word)
+            
+    return emoji list

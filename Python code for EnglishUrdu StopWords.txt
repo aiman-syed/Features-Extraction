@@ -1,0 +1,29 @@
+import nltk
+nltk.download('punkt')
+from nltk.tokenize import RegexpTokenizer
+import re
+from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
+count=0
+
+ 
+text_string = open('C:\\Users\\aiman\Desktop\\Training\\author_id_005.txt', 'r')
+words = word_tokenize(text_string.read())
+#print(words)
+
+dataa= open('C:\\Users\\aiman\Desktop\\author_id_002.txt', 'r')
+stopWords = word_tokenize(dataa.read())
+
+#print(dataa)
+
+wordsFiltered = []
+
+
+for w in words:
+    if w in stopWords:
+        wordsFiltered.append(w)
+        count+=1
+
+#print(wordsFiltered)
+
+print (count)
